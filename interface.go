@@ -20,14 +20,9 @@ type ClientPlugin interface {
 }
 
 type ConnPlugin interface {
-	//ConnPluginWriter
 	SendMsg([]byte) error
 	RecvMsg() ([]byte, error)
 
 	RemoteAddr() string
 	Close() error
 }
-
-//type ConnPluginWriter interface {
-//	SendMsg([]byte) error
-//}
